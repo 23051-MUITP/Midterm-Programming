@@ -1,0 +1,167 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add a gap between columns */
+}
+
+
+.header {
+    text-align: center;
+    width: 100%; /* Ensures header takes full width */
+    margin-bottom: 30px;
+    background-color: #333;
+    color: #fff;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.header h6 {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Main news content */
+.news {
+    flex: 3; /* Takes 3 parts of the available space */
+    display: flex;
+    flex-direction: column;
+}
+
+.article {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.article.big {
+    /* Styles specific to big articles can go here */
+}
+
+.article.medium {
+    /* Styles specific to medium articles can go here */
+}
+
+.articlecontent h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.articlecontent p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Sidebar styles */
+.sidebar {
+    flex: 1; /* Takes 1 part of the available space */
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar .pins {
+    margin-bottom: 20px;
+}
+
+.sidebar .pins h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.sidebar .pins p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #666;
+}
+
+/* Footer styles */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%; /* Ensures footer takes full width */
+}
+
+/* Rest of the footer styles remain the same */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .news, .sidebar {
+        width: 100%;
+    }
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex; /* Use flexbox to create a row of columns */
+    justify-content: space-around; /* Space out the columns evenly */
+}
+
+.footer .bottomlinks {
+    flex: 1; /* Each .bottomlinks div will take up an equal amount of space */
+    padding: 0 20px; /* Add padding for spacing inside the columns */
+}
+
+.footer .bottomlinks h4 {
+    margin-bottom: 10px; /
+}
+
+
+.footer .bottomlinks ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block; 
+    padding: 5px 0; 
+
+.footer .bottomlinks ul li a:hover {
+    text-decoration: underline; 
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        text-align: center; /* Center-align the content */
+    }
+
+    .footer .bottomlinks {
+        padding: 10px 0; /* Adjust padding for a stacked layout */
+    }
+
+    .footer .bottomlinks ul li a {
+        padding: 5px; 
+    }
+}
